@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "a257073e-0c79-4fe8-bf41-6355de5cd73a",
+		"name": "ChargingStations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/charging-stations",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"charging-stations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/charging-stations/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"charging-stations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"location\" : {\r\n        \"type\" : \"Point\",\r\n        \"coordinates\" : [ \r\n            -75.0, \r\n            42.0\r\n        ]\r\n    },\r\n    \"price\" : \"40\",\r\n    \"powerSocketList\" : [ \r\n        {\r\n            \"power\" : 350,\r\n            \"socketType\" : \"TESLA\"\r\n        }\r\n    ],\r\n    \"standard\" : \"OCPP20\",\r\n    \"active\" : false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/charging-stations",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"charging-stations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": \"62045151debad91091370730\",\r\n        \"location\": {\r\n            \"type\": \"Point\",\r\n            \"coordinates\": [\r\n                -76.0,\r\n                40.0\r\n            ]\r\n        },\r\n        \"price\": 10,\r\n        \"powerSocketList\": [\r\n            {\r\n                \"power\": 50,\r\n                \"socketType\": \"TYPE1\"\r\n            }\r\n        ],\r\n        \"standard\": \"OCPP20\",\r\n        \"active\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/charging-stations",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"charging-stations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/charging-stations/62045151debad91091370730",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"charging-stations",
+						"62045151debad91091370730"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "177071a9-433f-4de8-99cd-7ed19267a939",
+		"name": "ChargingStation Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/charging-station-service/find?power=50&socketType=TYPE1&standard=Q",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"charging-station-service",
+						"find"
+					],
+					"query": [
+						{
+							"key": "power",
+							"value": "50"
+						},
+						{
+							"key": "socketType",
+							"value": "TYPE1"
+						},
+						{
+							"key": "standard",
+							"value": "Q"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nearest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/charging-station-service/nearest?longitude=-75&latitude=40&distance=0.01",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"charging-station-service",
+						"nearest"
+					],
+					"query": [
+						{
+							"key": "longitude",
+							"value": "-75"
+						},
+						{
+							"key": "latitude",
+							"value": "40"
+						},
+						{
+							"key": "distance",
+							"value": "0.01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/charging-station-service/book/6206a4baac48e5660143ee8e?date=2020-01-01&hour=10",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"charging-station-service",
+						"book",
+						"6206a4baac48e5660143ee8e"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2020-01-01"
+						},
+						{
+							"key": "hour",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/charging-station-service/activate/6206a4baac48e5660143ee8e",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"charging-station-service",
+						"activate",
+						"6206a4baac48e5660143ee8e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
